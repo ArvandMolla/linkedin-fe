@@ -3,6 +3,7 @@ import { CgGoogle } from "react-icons/cg";
 import { MdPhotoCamera } from "react-icons/md";
 import ProfilePicModal from "./ProfilePicModal";
 
+const apiUrl = process.env.REACT_APP_API_URL;
 class Header extends Component {
   state = {
     isEditingPic: false,
@@ -59,7 +60,11 @@ class Header extends Component {
               <li>150 connections</li>
               <li>.</li>
               <li>
-                <a href="http://localhost:3003/api/profile/60c9fddd35e957371cfa7adc/cv-download">
+                <a
+                  href={
+                    apiUrl + "/api/profile/60c9fddd35e957371cfa7adc/cv-download"
+                  }
+                >
                   Download CV
                 </a>
               </li>
